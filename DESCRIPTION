@@ -1,0 +1,2 @@
+A reusable Django app to provide a correct order for names according to the
+currently set language.
