@@ -51,19 +51,19 @@ Example::
         def get_title(self):
             """Returns either 'Mr.' or 'Mrs.' depending on the gender."""
             return 'Mr.'
-        def get_romanized_first_name()
+        def get_romanized_first_name(self):
             """Returns the first name in roman letters."""
             return self.first_name  # e.g. Zhang
-        def get_romanized_last_name()
+        def get_romanized_last_name(self):
             """Returns the first name in roman letters."""
             return self.last_name  # e.g. Mingshun
-        def get_non_romanized_first_name()
+        def get_non_romanized_first_name(self):
             """Returns the non roman version of the first name."""
             return self.chinese_first_name  # e.g. 张
-        def get_non_romanized_last_name()
+        def get_non_romanized_last_name(self):
             """Returns the non roman version of the first name."""
             return self.chinese_last_name  # e.g. 明顺
-        def get_nickname()
+        def get_nickname(self):
             """Returns the nickname of a person in roman letters."""
             return self.nickname  # e.g. Jack
 
