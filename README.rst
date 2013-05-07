@@ -1,5 +1,5 @@
-Django Localize Names
-=====================
+Django Localized Names
+======================
 
 
 .. WARNING::
