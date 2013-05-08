@@ -4,6 +4,6 @@ include DESCRIPTION
 include CHANGELOG.txt
 include README.md
 graft localized_names
-global-exclude *.orig *.pyc *.log
-prune localized_names/tests/coverage/
-prune localized_names/.ropeproject/
+global-exclude *.orig *.pyc *.log *.swp
+prune localized_names/tests/coverage
+prune localized_names/.ropeproject
