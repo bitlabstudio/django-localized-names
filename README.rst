@@ -71,8 +71,8 @@ Example::
 Templatetag
 ===========
 
-To get the name of a `person`, you just use the templatetag in template like so
-`{{ person|get_name "SHORT_NAME_FORMAT" }}`.
+To get the name of a `person` you simply use the templatetag in the template
+like so `{{ person|get_name "SHORT_NAME_FORMAT" }}`.
 
 Alternatively you can provide `"LONG_NAME_FORMAT"`, which is the default.
 
