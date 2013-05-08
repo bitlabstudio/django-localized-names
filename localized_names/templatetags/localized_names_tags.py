@@ -1,9 +1,13 @@
 """Template tags for the ``localized_names`` app."""
 from django.utils.translation import gettext
+from django import template
 
 from django_libs.format_utils import get_format
 
+register = template.Library()
 
+
+@register.filter
 def get_name(obj, setting_name='LONG_NAME_FORMAT'):
     """
     Returns the correct order of the name according to the current language.
