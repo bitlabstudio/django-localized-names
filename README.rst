@@ -2,9 +2,6 @@ Django Localized Names
 ======================
 
 
-.. WARNING::
-    This is early alpha. Please stand by to await a stable pypi version.
-
 A reusable Django app to provide a correct order for names according to the
 currently set language.
 

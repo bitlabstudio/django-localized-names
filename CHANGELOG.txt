@@ -3,4 +3,7 @@
 
 === 0.1 ===
 
+- adding get_name template_tag to get the correct order of a name for certain
+  languages in a template
+
 Initial commit
