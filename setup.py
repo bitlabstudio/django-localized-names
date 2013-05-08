@@ -23,9 +23,14 @@ setup(
     url="https://github.com/bitmazk/django-localized-names",
     packages=find_packages(),
     include_package_data=True,
+    install_requires=[
+        'Django>=1.5.1',
+        'South',
+        'django-libs',
+    ],
     tests_require=[
         'fabric',
-        'factory_boy',
+        'factory_boy<2.0.0',
         'django-nose',
         'coverage',
         'django-coverage',

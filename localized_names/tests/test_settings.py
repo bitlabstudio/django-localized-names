@@ -51,9 +51,6 @@ EXTERNAL_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.sites',
     'django_nose',
-    'filer',
-    'mptt',
-    'easy_thumbnails',
 ]
 
 INTERNAL_APPS = [
