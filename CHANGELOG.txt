@@ -1,5 +1,6 @@
 === ongoing ===
 
+- Fix for gettext returning header text when receiving a blank string
 
 === 0.1 ===
 
