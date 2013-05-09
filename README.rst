@@ -2,8 +2,18 @@ Django Localized Names
 ======================
 
 
-A reusable Django app to provide a correct order for names according to the
-currently set language.
+A reusable Django app to allow localization of person names similar to the way
+Django localizes dates and numbers. You will have this need when you deal with
+projects that have Chinese and English language, because in Chinese, names are
+written in the following format::
+
+    {last name}{first name}{title}
+
+Whereas in English, of course, they are written like so::
+
+    {title}. {first name} {last name}
+
+This app will make sure, that when a user switches the language for the site, even person names will get "translated" properly.
 
 
 Installation
@@ -85,8 +95,8 @@ If you want to override our standards, you can set the
 If you provide additional formats, you simply extend the setting. ::
 
     CUSTOM_FORMAT_MODULE_PATHS = [
-        'localized_names.formats',
         'my_app.formats',
+        'localized_names.formats',
     ]
 
 
