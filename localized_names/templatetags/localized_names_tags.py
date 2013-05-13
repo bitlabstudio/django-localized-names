@@ -26,7 +26,7 @@ def get_name(obj, setting_name='LONG_NAME_FORMAT'):
     else:
         title = non_translated_title
 
-    format_string = get_format(setting_name)
+    format_string = unicode(get_format(setting_name))
     format_kwargs = {}
     if '{n}' in format_string:
         format_kwargs.update({'n': nickname})
