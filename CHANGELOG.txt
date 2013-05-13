@@ -1,5 +1,8 @@
 === ongoing ===
 
+
+=== 0.1.2 ===
+
 - forcing unicode on format string in get_name tag
 
 === 0.1.1 ===
