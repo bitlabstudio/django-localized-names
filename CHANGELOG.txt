@@ -1,5 +1,7 @@
 === ongoing ===
 
+=== 0.2 ===
+
 - accepting get_gender interface method
 - fixed unicode bug
 
