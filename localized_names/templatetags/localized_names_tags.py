@@ -19,12 +19,19 @@ def get_name(obj, setting_name='LONG_NAME_FORMAT'):
     non_romanized_first_name = obj.get_non_romanized_first_name()
     non_romanized_last_name = obj.get_non_romanized_last_name()
     non_translated_title = obj.get_title()
+    non_translated_gender = obj.get_gender()
     # when the title is blank, gettext returns weird header text. So if this
     # occurs, we will pass it on blank without gettext
     if non_translated_title:
         title = gettext(non_translated_title)
+        title = title.decode('utf8')
     else:
         title = non_translated_title
+    if non_translated_gender:
+        gender = gettext(non_translated_gender)
+        gender = gender.decode('utf8')
+    else:
+        gender = non_translated_gender
 
     format_string = unicode(get_format(setting_name))
     format_kwargs = {}
@@ -52,5 +59,9 @@ def get_name(obj, setting_name='LONG_NAME_FORMAT'):
         format_kwargs.update({'t': title})
     if '{T}' in format_string:
         format_kwargs.update({'T': title.upper()})
+    if '{g}' in format_string:
+        format_kwargs.update({'g': gender})
+    if '{G}' in format_string:
+        format_kwargs.update({'G': gender.upper()})
 
     return format_string.format(**format_kwargs)

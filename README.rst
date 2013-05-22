@@ -55,9 +55,15 @@ Example::
 
         # your fields go here
 
-        def get_title(self):
+        def get_gender(self):
             """Returns either 'Mr.' or 'Mrs.' depending on the gender."""
-            return 'Mr.'
+            if self.gender == 'male':
+                return 'Mr'
+            else:
+                return 'Mrs'
+        def get_title(self):
+            """Returns the academic title of the person"""
+            return self.title
         def get_romanized_first_name(self):
             """Returns the first name in roman letters."""
             return self.first_name  # e.g. Zhang
@@ -124,7 +130,9 @@ The `formats.py` will then need a setting for `SHORT_NAME_FORMAT` and
 
 Possible options are ::
 
-    t = title
+    g = gender (i.e. Mr, Mrs)
+    G = gender capitalized
+    t = title (i.e. Dr, Prof)
     t = title capitalized
     f = romanized first name
     F = romanized first name capitalized
@@ -139,7 +147,7 @@ Possible options are ::
 
 For example ::
 
-    LONG_NAME_FORMAT = '{a}{x}{t} ({L}, "{n}", {f})'
+    LONG_NAME_FORMAT = '{a}{x}{g} ({L}, "{n}", {f})'
 
 would yield in the following formatted name:
 
