@@ -10,6 +10,7 @@ class DummyModel(models.Model):
     non_romanized_first_name = models.CharField(max_length=64)
     non_romanized_last_name = models.CharField(max_length=64)
     nickname = models.CharField(max_length=64)
+    gender = models.CharField(max_length=64)
 
     def get_title(self):
         return self.title
@@ -28,3 +29,6 @@ class DummyModel(models.Model):
 
     def get_nickname(self):
         return self.nickname
+
+    def get_gender(self):
+        return self.gender
