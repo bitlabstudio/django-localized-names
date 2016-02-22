@@ -25,7 +25,6 @@ setup(
     include_package_data=True,
     install_requires=[
         'Django>=1.4.3',
-        'South',
         'django-libs',
     ],
     tests_require=[
