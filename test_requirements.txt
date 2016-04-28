@@ -1,0 +1,6 @@
+tox
+ipdb
+flake8
+coverage
+fabric3
+mixer

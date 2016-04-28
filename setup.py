@@ -24,16 +24,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        'Django>=1.4.3',
+        'Django',
         'django-libs',
     ],
-    tests_require=[
-        'fabric',
-        'factory_boy<2.0.0',
-        'django-nose',
-        'coverage',
-        'django-coverage',
-        'mock',
-    ],
-    test_suite='localized_names.tests.runtests.runtests',
 )

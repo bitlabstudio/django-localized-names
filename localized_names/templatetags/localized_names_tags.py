@@ -24,16 +24,14 @@ def get_name(obj, setting_name='LONG_NAME_FORMAT'):
     # occurs, we will pass it on blank without gettext
     if non_translated_title:
         title = gettext(non_translated_title)
-        title = title.decode('utf8')
     else:
         title = non_translated_title
     if non_translated_gender:
         gender = gettext(non_translated_gender)
-        gender = gender.decode('utf8')
     else:
         gender = non_translated_gender
 
-    format_string = unicode(get_format(setting_name))
+    format_string = u'{}'.format(get_format(setting_name))
     format_kwargs = {}
     if '{n}' in format_string:
         format_kwargs.update({'n': nickname})

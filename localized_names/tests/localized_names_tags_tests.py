@@ -2,8 +2,9 @@
 from django.conf import settings
 from django.test import TestCase
 
+from mixer.backend.django import mixer
+
 from ..templatetags.localized_names_tags import get_name
-from .factories import DummyModelFactory
 
 
 class GetNameTestCase(TestCase):
@@ -11,7 +12,7 @@ class GetNameTestCase(TestCase):
     longMessage = True
 
     def setUp(self):
-        self.obj = DummyModelFactory()
+        self.obj = mixer.blend('test_app.DummyModel')
 
     def test_get_name(self):
         """Test for the ``get_name`` templatetag."""
