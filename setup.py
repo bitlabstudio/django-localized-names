@@ -2,10 +2,11 @@ import os
 from setuptools import setup, find_packages
 import localized_names as app
 
-
 def read(fname):
     try:
-        return open(os.path.join(os.path.dirname(__file__), fname)).read()
+        return open(os.path.join(os.path.dirname(__file__), fname),
+                    'r',
+                    encoding='utf8').read()
     except IOError:
         return ''
 
